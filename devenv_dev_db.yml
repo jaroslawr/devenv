@@ -1,0 +1,20 @@
+- hosts: localhost
+  tasks:
+    - name: Databases - PostgreSQL
+      apt: pkg={{item}}
+      with_items:
+        - postgresql
+        - libpq-dev
+        - pgcli
+
+    - name: Databases - MySQL
+      apt: pkg={{item}}
+      with_items:
+        - default-mysql-server
+        - mycli
+
+    - name: Databases - Redis
+      apt: pkg={{item}}
+      with_items:
+        - redis-server
+        - redis-tools

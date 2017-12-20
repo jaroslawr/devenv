@@ -1,0 +1,49 @@
+- hosts: localhost
+  tasks:
+    - name: Development - basic packages
+      apt: pkg={{item}}
+      with_items:
+        - tmux
+        - zsh
+        - git
+        - tig
+        - silversearcher-ag
+        - awscli
+        - emacs25
+        - emacs25-common-non-dfsg # emacs info documentation
+
+        # Build environment
+        - build-essential
+        - autoconf
+
+        # Headers for common libraries
+        # many Python/Ruby/Node/etc packages will require some of those
+        - libpng-dev
+
+        # Troubleshooting - general
+        - gdb
+        - strace
+        - lsof
+        - htop
+        - dstat
+
+        # Troubleshooting - network
+        - tcpdump
+        - mtr
+        - ngrep
+        - nmap # ncat
+        - dnsutils # dig
+        - net-tools # netstat
+
+    - name: Development - Docker - setup apt key
+      apt_key:
+        url: https://download.docker.com/linux/debian/gpg
+        state: present
+
+    - name: Development - Docker - setup apt repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/debian stretch stable
+
+    - name: Development - Docker - install
+      apt:
+        pkg: docker-ce

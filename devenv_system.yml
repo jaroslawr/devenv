@@ -1,0 +1,28 @@
+- hosts: localhost
+  tasks:
+    - name: Basic system packages
+      apt: pkg={{item}}
+      with_items:
+        - network-manager # wifi
+        - stow # dotfiles
+        - ufw # firewall
+        - cups # printer
+
+    - name: Firewall
+      ufw:
+        state: enabled
+
+    - name: Firewall - allow outgoing
+      ufw:
+        direction: outgoing
+        policy: allow
+
+    - name: Firewall - deny incoming
+      ufw:
+        direction: incoming
+        policy: deny
+
+    - name: Sysctl settings
+      # Necessary for IDEs and editors (intellij etc.),
+      # which use inotify to watch filesystem changes
+      sysctl: name=fs.inotify.max_user_watches value=524288

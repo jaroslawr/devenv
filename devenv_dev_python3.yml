@@ -1,0 +1,14 @@
+- hosts: localhost
+  tasks:
+    - name: Programming - Python3 - install
+      apt: pkg={{item}}
+      with_items:
+        - python3-virtualenv
+        - python3-pip
+
+    - name: Programming - Python3 - packages
+      pip: name={{item}} executable=pip3
+      with_items:
+        - ipython
+        - pandas
+        - csvkit

@@ -1,0 +1,15 @@
+- hosts: localhost
+  tasks:
+    - name: Programming - Java - setup apt key
+      apt_key:
+        keyserver: hkp://keyserver.ubuntu.com
+        id: EEA14886
+        state: present
+
+    - name: Programming - Java - setup apt repository
+      apt_repository:
+        repo: deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main
+
+    - name: Programming - Java - install
+      apt:
+        pkg: oracle-java8-installer

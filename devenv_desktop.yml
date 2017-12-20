@@ -1,0 +1,30 @@
+- hosts: localhost
+  tasks:
+    - name: Desktop
+      apt: pkg={{item}}
+      with_items:
+        # Basic software
+        - task-gnome-desktop
+        - gimp
+        - keepassx
+        # Fonts
+        - fonts-dejavu
+        - fonts-firacode
+        - fonts-hack-ttf
+        - fonts-inconsolata
+        - ttf-bitstream-vera
+        - ttf-mscorefonts-installer
+        - xfonts-terminus
+
+    - name: Desktop - Chrome - setup apt key
+      apt_key:
+        url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+        state: present
+
+    - name: Desktop - Chrome - setup apt repository
+      apt_repository:
+        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+
+    - name: Desktop - Chrome - install
+      apt:
+        pkg: google-chrome-stable
