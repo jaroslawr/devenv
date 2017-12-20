@@ -1,0 +1,188 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Sysctl settings
+      # Necessary for IDEs and editors (intellij etc.),
+      # which use inotify to watch filesystem changes
+      sysctl: name=fs.inotify.max_user_watches value=524288
+
+    - name: Firewall
+      ufw:
+        state: enabled
+
+    - name: Firewall - allow outgoing
+      ufw:
+        direction: outgoing
+        policy: allow
+
+    - name: Firewall - deny incoming
+      ufw:
+        direction: incoming
+        policy: deny
+
+    - name: Basic system tools
+      apt: pkg={{item}}
+      with_items:
+        - network-manager # wifi
+        - stow # dotfiles
+        - ufw # firewall
+        - cups # printer
+
+    - name: Desktop
+      apt: pkg={{item}}
+      with_items:
+        - task-gnome-desktop
+        - gimp
+        - keepassx
+        - ranger
+        - atool # dependency of ranger - multi-format archive tool
+
+    - name: Desktop - fonts
+      apt: pkg={{item}}
+      with_items:
+        - fonts-dejavu
+        - fonts-firacode
+        - fonts-hack-ttf
+        - fonts-inconsolata
+        - ttf-bitstream-vera
+        - ttf-mscorefonts-installer
+        - xfonts-terminus
+
+    - name: Desktop - Chrome - setup apt key
+      apt_key:
+        url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+        state: present
+
+    - name: Desktop - Chrome - setup apt repository
+      apt_repository:
+        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+
+    - name: Desktop - Chrome - install
+      apt:
+        pkg: google-chrome-stable
+
+    - name: Development essentials
+      apt: pkg={{item}}
+      with_items:
+        - rxvt-unicode
+        - zsh
+        - tmux
+        - git
+        - tig
+        - silversearcher-ag
+        - emacs25
+        - emacs25-common-non-dfsg # emacs info documentation
+        - awscli
+
+    - name: Development essentials - Docker - setup apt key
+      apt_key:
+        url: https://download.docker.com/linux/debian/gpg
+        state: present
+
+    - name: Development essentials - Docker - setup apt repository
+      apt_repository:
+        repo: deb https://download.docker.com/linux/debian stretch stable
+
+    - name: Development essentials - Docker - install
+      apt:
+        pkg: docker-ce
+
+    - name: Build environment
+      apt: pkg={{item}}
+      with_items:
+        - build-essential
+        - autoconf
+        # Frequently needed headers
+        - libpng-dev
+
+    - name: Troubleshooting tools - general
+      apt: pkg={{item}}
+      with_items:
+        - gdb
+        - strace
+        - lsof
+        - htop
+        - dstat
+
+    - name: Troubleshooting tools - network
+      apt: pkg={{item}}
+      with_items:
+        - tcpdump
+        - mtr
+        - ngrep
+        - nmap # ncat
+        - dnsutils # dig
+        - net-tools # netstat
+
+    - name: HTTP servers & clients
+      apt: pkg={{item}}
+      with_items:
+        - nginx
+        - curl
+        - wget
+        - apache2-utils # ab
+
+    - name: Databases - PostgreSQL
+      apt: pkg={{item}}
+      with_items:
+        - postgresql
+        - libpq-dev
+        - pgcli
+
+    - name: Databases - MySQL
+      apt: pkg={{item}}
+      with_items:
+        - default-mysql-server
+        - mycli
+
+    - name: Databases - Redis
+      apt: pkg={{item}}
+      with_items:
+        - redis-server
+        - redis-tools
+
+    - name: Programming - Java - setup apt key
+      apt_key:
+        keyserver: hkp://keyserver.ubuntu.com
+        id: EEA14886
+        state: present
+
+    - name: Programming - Java - setup apt repository
+      apt_repository:
+        repo: deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main
+
+    - name: Programming - Java - install
+      apt:
+        pkg: oracle-java8-installer
+
+    - name: Programming - Node - setup apt key
+      apt_key:
+        url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+        state: present
+
+    - name: Programming - Node - setup apt repository
+      apt_repository:
+        repo: deb https://deb.nodesource.com/node_8.x buster main
+
+    - name: Programming - Node - install
+      apt:
+        pkg: nodejs
+
+    - name: Programming - Python2 - install
+      apt: pkg={{item}}
+      with_items:
+        - python-virtualenv
+        - python-pip
+
+    - name: Programming - Python3 - install
+      apt: pkg={{item}}
+      with_items:
+        - python3-virtualenv
+        - python3-pip
+
+    - name: Programming - Python3 - packages
+      pip: name={{item}} executable=pip3
+      with_items:
+        - ipython
+        - pandas
+        - csvkit
