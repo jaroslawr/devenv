@@ -1,6 +1,5 @@
 ---
 - import_playbook: devenv_system.yml
-- import_playbook: devenv_desktop.yml
 - import_playbook: devenv_dev.yml
 - import_playbook: devenv_dev_http.yml
 - import_playbook: devenv_dev_db.yml

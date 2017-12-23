@@ -1,6 +1,6 @@
 - hosts: localhost
   tasks:
-    - name: Development - basic packages
+    - name: Basic development packages
       apt: pkg={{item}}
       with_items:
         - tmux
@@ -35,15 +35,15 @@
         - dnsutils # dig
         - net-tools # netstat
 
-    - name: Development - Docker - setup apt key
+    - name: Docker - setup apt key
       apt_key:
         url: https://download.docker.com/linux/debian/gpg
         state: present
 
-    - name: Development - Docker - setup apt repository
+    - name: Docker - setup apt repository
       apt_repository:
         repo: deb https://download.docker.com/linux/debian stretch stable
 
-    - name: Development - Docker - install
+    - name: Docker - install
       apt:
         pkg: docker-ce

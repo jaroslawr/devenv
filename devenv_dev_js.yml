@@ -1,14 +1,14 @@
 - hosts: localhost
   tasks:
-    - name: Programming - Node - setup apt key
+    - name: Node - setup apt key
       apt_key:
         url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
         state: present
 
-    - name: Programming - Node - setup apt repository
+    - name: Node - setup apt repository
       apt_repository:
         repo: deb https://deb.nodesource.com/node_8.x buster main
 
-    - name: Programming - Node - install
+    - name: Node - install
       apt:
         pkg: nodejs

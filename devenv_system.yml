@@ -1,12 +1,44 @@
 - hosts: localhost
   tasks:
-    - name: Basic system packages
+    - name: Base packages
       apt: pkg={{item}}
       with_items:
+        - iw # wifi
         - network-manager # wifi
         - stow # dotfiles
         - ufw # firewall
         - cups # printer
+
+    - name: Desktop packages
+      apt: pkg={{item}}
+      with_items:
+        - gnome-core
+        - gimp
+        - keepassx
+
+    - name: Fonts
+      apt: pkg={{item}}
+      with_items:
+        - fonts-dejavu
+        - fonts-firacode
+        - fonts-hack-ttf
+        - fonts-inconsolata
+        - ttf-bitstream-vera
+        - ttf-mscorefonts-installer
+        - xfonts-terminus
+
+    - name: Chrome - setup apt key
+      apt_key:
+        url: https://dl-ssl.google.com/linux/linux_signing_key.pub
+        state: present
+
+    - name: Chrome - setup apt repository
+      apt_repository:
+        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+
+    - name: Chrome - install
+      apt:
+        pkg: google-chrome-stable
 
     - name: Firewall
       ufw:
