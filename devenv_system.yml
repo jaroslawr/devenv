@@ -1,4 +1,8 @@
 - hosts: localhost
+
+  vars_files:
+    - config.yml
+
   tasks:
     - name: Install packages
       apt: pkg={{item}}
@@ -21,6 +25,12 @@
         - gnome-core
         - gimp
         - keepassx
+
+    - name: Add users to groups
+      with_items: users
+      user:
+        name: "{{ item }}"
+        groups: sudo,lp,lpadmin
 
     - name: Chrome - setup apt key
       apt_key:

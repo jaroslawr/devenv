@@ -1,4 +1,8 @@
 - hosts: localhost
+
+  vars_files:
+    - config.yml
+
   tasks:
     - name: Install packages
       apt: pkg={{item}}
@@ -35,6 +39,12 @@
         - nmap # ncat
         - dnsutils # dig
         - net-tools # netstat
+
+    - name: Add users to groups
+      with_items: users
+      user:
+        name: "{{ item }}"
+        groups: docker
 
     - name: Docker - setup apt key
       apt_key:
