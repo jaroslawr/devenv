@@ -1,8 +1,9 @@
 - hosts: localhost
   tasks:
-    - name: Basic development packages
+    - name: Install packages
       apt: pkg={{item}}
       with_items:
+        # Base
         - tmux
         - zsh
         - git

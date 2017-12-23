@@ -1,24 +1,15 @@
 - hosts: localhost
   tasks:
-    - name: Base packages
+    - name: Install packages
       apt: pkg={{item}}
       with_items:
+        # Base
         - iw # wifi
         - network-manager # wifi
         - stow # dotfiles
         - ufw # firewall
         - cups # printer
-
-    - name: Desktop packages
-      apt: pkg={{item}}
-      with_items:
-        - gnome-core
-        - gimp
-        - keepassx
-
-    - name: Fonts
-      apt: pkg={{item}}
-      with_items:
+        # Fonts
         - fonts-dejavu
         - fonts-firacode
         - fonts-hack-ttf
@@ -26,6 +17,10 @@
         - ttf-bitstream-vera
         - ttf-mscorefonts-installer
         - xfonts-terminus
+        # Desktop
+        - gnome-core
+        - gimp
+        - keepassx
 
     - name: Chrome - setup apt key
       apt_key:

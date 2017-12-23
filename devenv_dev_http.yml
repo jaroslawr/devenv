@@ -1,6 +1,6 @@
 - hosts: localhost
   tasks:
-    - name: HTTP servers & clients
+    - name: Install HTTP servers & clients
       apt: pkg={{item}}
       with_items:
         - nginx
