@@ -1,9 +1,9 @@
 ---
-- import_playbook: devenv_system.yml
-- import_playbook: devenv_dev.yml
-- import_playbook: devenv_dev_http.yml
-- import_playbook: devenv_dev_db.yml
-- import_playbook: devenv_dev_java.yml
-- import_playbook: devenv_dev_js.yml
-- import_playbook: devenv_dev_python2.yml
-- import_playbook: devenv_dev_python3.yml
+- import_playbook: system_base.yml
+- import_playbook: system_dev.yml
+- import_playbook: servers_http.yml
+- import_playbook: servers_db.yml
+- import_playbook: lang_java.yml
+- import_playbook: lang_js.yml
+- import_playbook: lang_python2.yml
+- import_playbook: lang_python3.yml
