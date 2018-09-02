@@ -18,6 +18,7 @@
         - fonts-firacode
         - fonts-hack-ttf
         - fonts-inconsolata
+        - fonts-powerline
         - ttf-bitstream-vera
         - ttf-mscorefonts-installer
         - xfonts-terminus
