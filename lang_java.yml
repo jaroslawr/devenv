@@ -11,5 +11,7 @@
         repo: deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main
 
     - name: Java - install
-      apt:
-        pkg: oracle-java8-installer
+      apt: pkg={{item}}
+      with_items:
+        - oracle-java8-installer
+        - maven
