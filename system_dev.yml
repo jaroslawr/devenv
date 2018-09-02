@@ -41,7 +41,8 @@
         - tcpdump
         - mtr
         - ngrep
-        - nmap # ncat
+        - nmap
+        - ncat
         - dnsutils # dig
         - net-tools # netstat
 
