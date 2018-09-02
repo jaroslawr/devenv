@@ -31,6 +31,9 @@
         - lsof
         - htop
         - dstat
+        - iotop
+        - iftop
+        - sysstat # sar, pidstat, iostat, mpstat
 
         # Troubleshooting - network
         - tcpdump
