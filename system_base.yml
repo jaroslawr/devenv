@@ -13,17 +13,16 @@
         - stow # dotfiles
         - ufw # firewall
         - cups # printer
-        # Fonts
-        - fonts-dejavu
-        - fonts-firacode
-        - fonts-hack-ttf
-        - fonts-inconsolata
-        - fonts-powerline
-        - ttf-bitstream-vera
-        - ttf-mscorefonts-installer
-        - xfonts-terminus
         # Desktop
         - gnome-core
+        - gnome-shell-extensions
+        - gnome-tweak-tool
+        - arc-theme
+        - moka-icon-theme
+        - fonts-play
+        - fonts-ubuntu
+        - ttf-mscorefonts-installer
+        # Desktop software
         - gimp
         - keepassx
 
@@ -32,6 +31,14 @@
       user:
         name: "{{ item }}"
         groups: sudo,lp,lpadmin
+
+    - name: X - cursor theme install
+      apt: pkg=dmz-cursor-theme
+
+    - name: X - cursor theme setup
+      alternatives:
+        name: x-cursor-theme
+        path: /usr/share/icons/DMZ-White/index.theme
 
     - name: Chrome - setup apt key
       apt_key:
