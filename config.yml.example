@@ -1,3 +1,6 @@
+locale:
+  - en_US.UTF-8
+
 users:
   - username1
   - username2

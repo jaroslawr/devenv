@@ -5,7 +5,7 @@
 
   tasks:
     - name: Install packages
-      apt: pkg={{item}}
+      apt: pkg="{{ item }}"
       with_items:
         # Base
         - iw # wifi
@@ -31,6 +31,12 @@
       user:
         name: "{{ item }}"
         groups: sudo,lp,lpadmin
+
+    - name: Generate locales
+      locale_gen:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ locale }}"
 
     - name: X - cursor theme install
       apt: pkg=dmz-cursor-theme
