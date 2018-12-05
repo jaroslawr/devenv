@@ -46,12 +46,6 @@
           - dnsutils # dig
           - net-tools # netstat
 
-    - name: Add users to groups
-      with_items: users
-      user:
-        name: "{{ item }}"
-        groups: docker
-
     - name: Docker - setup apt key
       apt_key:
         url: https://download.docker.com/linux/debian/gpg
@@ -64,3 +58,10 @@
     - name: Docker - install
       apt:
         pkg: docker-ce
+
+    - name: Add users to groups
+      with_items: users
+      user:
+        name: "{{ item }}"
+        groups: docker
+        append: yes
