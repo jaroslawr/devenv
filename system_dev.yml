@@ -10,9 +10,13 @@
           # Base
           - tmux
           - zsh
+          - mc
           - pv
           - git
           - tig
+          - ssh
+          - openvpn
+          - gnupg
           - silversearcher-ag
           - awscli
           - emacs25
