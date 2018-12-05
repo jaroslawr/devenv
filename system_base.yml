@@ -17,9 +17,8 @@
           - gnome-core
           - gnome-shell-extensions
           - gnome-tweak-tool
-          - arc-theme
+          - numix-gtk-theme
           - moka-icon-theme
-          - fonts-play
           - fonts-ubuntu
           - ttf-mscorefonts-installer
           # Desktop software
