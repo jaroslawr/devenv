@@ -5,46 +5,46 @@
 
   tasks:
     - name: Install packages
-      apt: pkg={{item}}
-      with_items:
-        # Base
-        - tmux
-        - zsh
-        - pv
-        - git
-        - tig
-        - silversearcher-ag
-        - awscli
-        - emacs25
-        - emacs25-common-non-dfsg # emacs info documentation
+      apt:
+        pkg:
+          # Base
+          - tmux
+          - zsh
+          - pv
+          - git
+          - tig
+          - silversearcher-ag
+          - awscli
+          - emacs25
+          - emacs25-common-non-dfsg # emacs info documentation
 
-        # Build environment
-        - build-essential
-        - autoconf
+          # Build environment
+          - build-essential
+          - autoconf
 
-        # Headers for common libraries
-        # many Python/Ruby/Node/etc packages will require some of those
-        - libpng-dev
+          # Headers for common libraries
+          # many Python/Ruby/Node/etc packages will require some of those
+          - libpng-dev
 
-        # Troubleshooting - general
-        - gdb
-        - strace
-        - lsof
-        - htop
-        - dstat
-        - iotop
-        - iftop
-        - sysstat # sar, pidstat, iostat, mpstat
-        - linux-perf
+          # Troubleshooting - general
+          - gdb
+          - strace
+          - lsof
+          - htop
+          - dstat
+          - iotop
+          - iftop
+          - sysstat # sar, pidstat, iostat, mpstat
+          - linux-perf
 
-        # Troubleshooting - network
-        - tcpdump
-        - mtr
-        - ngrep
-        - nmap
-        - ncat
-        - dnsutils # dig
-        - net-tools # netstat
+          # Troubleshooting - network
+          - tcpdump
+          - mtr
+          - ngrep
+          - nmap
+          - ncat
+          - dnsutils # dig
+          - net-tools # netstat
 
     - name: Add users to groups
       with_items: users

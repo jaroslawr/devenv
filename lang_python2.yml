@@ -1,7 +1,7 @@
 - hosts: localhost
   tasks:
     - name: Python2 - install
-      apt: pkg={{item}}
-      with_items:
-        - python-virtualenv
-        - python-pip
+      apt:
+        pkg:
+          - python-virtualenv
+          - python-pip

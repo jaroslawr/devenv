@@ -1,8 +1,8 @@
 - hosts: localhost
   tasks:
     - name: Java - install
-      apt: pkg={{item}}
-      with_items:
-        - openjdk-8-jdk
-        - openjdk-11-jdk
-        - maven
+      apt:
+        pkg:
+          - openjdk-8-jdk
+          - openjdk-11-jdk
+          - maven

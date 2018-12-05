@@ -1,25 +1,25 @@
 - hosts: localhost
   tasks:
     - name: Install PostgreSQL
-      apt: pkg={{item}}
-      with_items:
-        - postgresql
-        - libpq-dev
-        - pgcli
+      apt:
+        pkg:
+          - postgresql
+          - libpq-dev
+          - pgcli
 
     - name: Install MySQL
-      apt: pkg={{item}}
-      with_items:
-        - default-mysql-server
-        - mycli
+      apt:
+        pkg:
+          - default-mysql-server
+          - mycli
 
     - name: Install SQLite3
-      apt: pkg={{item}}
-      with_items:
-        - sqlite3
+      apt:
+        pkg:
+          - sqlite3
 
     - name: Install Redis
-      apt: pkg={{item}}
-      with_items:
-        - redis-server
-        - redis-tools
+      apt:
+        pkg:
+          - redis-server
+          - redis-tools

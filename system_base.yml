@@ -5,26 +5,26 @@
 
   tasks:
     - name: Install packages
-      apt: pkg="{{ item }}"
-      with_items:
-        # Base
-        - iw # wifi
-        - network-manager # wifi
-        - stow # dotfiles
-        - ufw # firewall
-        - cups # printer
-        # Desktop
-        - gnome-core
-        - gnome-shell-extensions
-        - gnome-tweak-tool
-        - arc-theme
-        - moka-icon-theme
-        - fonts-play
-        - fonts-ubuntu
-        - ttf-mscorefonts-installer
-        # Desktop software
-        - gimp
-        - keepassx
+      apt:
+        pkg:
+          # Base
+          - iw # wifi
+          - network-manager # wifi
+          - stow # dotfiles
+          - ufw # firewall
+          - cups # printer
+          # Desktop
+          - gnome-core
+          - gnome-shell-extensions
+          - gnome-tweak-tool
+          - arc-theme
+          - moka-icon-theme
+          - fonts-play
+          - fonts-ubuntu
+          - ttf-mscorefonts-installer
+          # Desktop software
+          - gimp
+          - keepassx
 
     - name: Add users to groups
       with_items: users
