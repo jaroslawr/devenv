@@ -14,24 +14,17 @@
           - pv
           - git
           - tig
-          - ssh
-          - openvpn
-          - gnupg
           - silversearcher-ag
           - awscli
           - emacs25
           - emacs25-common-non-dfsg # emacs info documentation
 
-          # Build environment
-          - build-essential
-          - autoconf
-
-          # Headers for common libraries
-          # many Python/Ruby/Node/etc packages will require some of those
-          - libpng-dev
+          # Crypto
+          - ssh
+          - openvpn
+          - gnupg
 
           # Troubleshooting - general
-          - gdb
           - strace
           - lsof
           - htop
