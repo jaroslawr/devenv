@@ -17,6 +17,7 @@
           - gnome-core
           - gnome-shell-extensions
           - gnome-tweak-tool
+          - xsel
           - numix-gtk-theme
           - moka-icon-theme
           - fonts-ubuntu
