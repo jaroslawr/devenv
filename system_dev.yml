@@ -15,6 +15,7 @@
           - git
           - tig
           - silversearcher-ag
+          - jq
           - awscli
           - emacs25
           - emacs25-common-non-dfsg # emacs info documentation
