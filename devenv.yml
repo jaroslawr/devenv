@@ -5,5 +5,4 @@
 - import_playbook: servers_db.yml
 - import_playbook: lang_java.yml
 - import_playbook: lang_js.yml
-- import_playbook: lang_python2.yml
-- import_playbook: lang_python3.yml
+- import_playbook: lang_python.yml
