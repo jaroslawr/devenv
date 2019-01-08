@@ -27,10 +27,11 @@
           - keepassx
 
     - name: Add users to groups
-      with_items: users
+      with_items: "{{ users }}"
       user:
         name: "{{ item }}"
         groups: sudo,lp,lpadmin
+        append: yes
 
     - name: Generate locales
       locale_gen:
