@@ -10,7 +10,7 @@
           # Base
           - iw # wifi
           - network-manager # wifi
-          - stow # dotfiles
+          - rcm # dotfiles
           - ufw # firewall
           - cups # printer
           # Desktop
