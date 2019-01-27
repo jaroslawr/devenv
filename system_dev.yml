@@ -15,6 +15,8 @@
           - git
           - tig
           - silversearcher-ag
+          - ripgrep
+          - fd-find
           - jq
           - awscli
           - emacs25
