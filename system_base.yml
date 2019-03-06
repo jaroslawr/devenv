@@ -21,7 +21,6 @@
           - numix-gtk-theme
           - moka-icon-theme
           - fonts-ubuntu
-          - ttf-mscorefonts-installer
           # Desktop software
           - gimp
           - keepassx
