@@ -21,6 +21,7 @@
           - awscli
           - emacs25
           - emacs25-common-non-dfsg # emacs info documentation
+          - neovim
 
           # Crypto
           - ssh
