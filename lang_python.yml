@@ -8,11 +8,13 @@
     - name: Python - packages
       pip:
         executable: pip3
+        state: latest
         name:
           - virtualenv
           - jupyter
+          - jupyterlab
           - numpy
           - scipy
           - pandas
-          - altair
+          - matplotlib
           - csvkit
