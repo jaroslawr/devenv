@@ -19,8 +19,8 @@
           - fd-find
           - jq
           - awscli
-          - emacs25
-          - emacs25-common-non-dfsg # emacs info documentation
+          - emacs
+          - emacs-common-non-dfsg # emacs info documentation
           - neovim
 
           # Crypto
