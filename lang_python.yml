@@ -17,4 +17,6 @@
           - scipy
           - pandas
           - matplotlib
+          - seaborn
+          - statsmodels
           - csvkit
