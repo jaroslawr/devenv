@@ -10,11 +10,9 @@
           # Base
           - tmux
           - zsh
-          - mc
           - pv
           - git
           - tig
-          - silversearcher-ag
           - ripgrep
           - fd-find
           - jq
