@@ -10,15 +10,22 @@
           # Base
           - tmux
           - zsh
-          - fzf
-          - pv
           - git
-          - tig
+          - neovim
           - ripgrep
           - fd-find
+          - fzf
+          - pv
+          - universal-ctags
+
+          # Data processing
           - jq
+
+          # Cloud
           - awscli
-          - neovim
+
+          # TUI
+          - tig
 
           # Crypto
           - ssh
