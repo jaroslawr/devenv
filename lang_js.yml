@@ -7,7 +7,7 @@
 
     - name: Node - setup apt repository
       apt_repository:
-        repo: deb https://deb.nodesource.com/node_8.x buster main
+        repo: deb https://deb.nodesource.com/node_13.x buster main
 
     - name: Node - install
       apt:
