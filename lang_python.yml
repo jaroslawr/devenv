@@ -11,6 +11,7 @@
         state: latest
         name:
           - virtualenv
+          - jedi
           - jupyter
           - jupyterlab
           - numpy
