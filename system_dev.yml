@@ -11,7 +11,7 @@
           - tmux
           - zsh
           - git
-          - neovim
+          - vim-nox
           - ripgrep
           - fd-find
           - fzf
