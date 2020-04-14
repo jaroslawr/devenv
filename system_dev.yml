@@ -50,6 +50,7 @@
           - ncat
           - dnsutils # dig
           - net-tools # netstat
+          - whois
 
     - name: Docker - setup apt key
       apt_key:
