@@ -63,6 +63,19 @@
       apt:
         pkg: google-chrome-stable
 
+    - name: Spotify - setup apt key
+      apt_key:
+        url: https://download.spotify.com/debian/pubkey.gpg
+        state: present
+
+    - name: Spotify - setup apt repository
+      apt_repository:
+        repo: deb http://repository.spotify.com stable non-free
+
+    - name: Spotify - install
+      apt:
+        pkg: spotify-client
+
     - name: Firewall
       ufw:
         state: enabled
