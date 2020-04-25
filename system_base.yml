@@ -36,11 +36,18 @@
         groups: sudo,lp,lpadmin
         append: yes
 
-    - name: Generate locales
+    - name: Locales - generate
       locale_gen:
         name: "{{ item }}"
         state: present
       loop: "{{ locale }}"
+
+    - name: Locales - setup
+      copy:
+        dest: /etc/default/locale
+        content: |
+          LANG={{ locale_lang }}
+          LC_TIME={{ locale_time }}
 
     - name: X - cursor theme install
       apt: pkg=dmz-cursor-theme
