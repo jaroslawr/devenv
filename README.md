@@ -1,27 +1,14 @@
-## Base system
+## Installation
 
-Debian images including firmware:
+Install Debian from unofficial images that include firmware:
 
-https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
+<https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/>
 
-First time manual network setup:
+After installing Debian, install git and ansible, checkout the repo and run the
+playbook:
 
-```shell
-# list interfaces
-ip link
-
-# enable interface
-ip link set [interface] up
-
-# generate wpa_supplicant config
-wpa_passphrase [network-name] > /etc/wpa_supplicant.conf
-
-# run wpa_supplicant
-wpa_supplicant -i [interface] -c /etc/wpa_supplicant.conf -B
-
-# check interface status
-iw dev [interface] link
-
-# obtain IP address
-dhclient [interface]
-```
+    su -l
+    apt-get install git ansible
+    git clone https://github.com/jaroslawr/devenv.git
+    cd devenv
+    ansible-playbook devenv.yml
