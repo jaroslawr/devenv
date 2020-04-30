@@ -14,7 +14,6 @@
           - jedi
           - jupyter
           - jupyterlab
-          - jupytext
           - numpy
           - scipy
           - pandas
