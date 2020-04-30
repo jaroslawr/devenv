@@ -3,6 +3,5 @@
     - name: Java - install
       apt:
         pkg:
-          - openjdk-8-jdk
           - openjdk-11-jdk
           - maven
