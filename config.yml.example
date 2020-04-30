@@ -1,6 +1,9 @@
-locale:
-  - en_US.UTF-8
-
 users:
   - username1
   - username2
+
+locale_to_generate:
+  - en_US.UTF-8
+
+locale_lang: en_US.UTF-8
+locale_time: en_US.UTF-8
