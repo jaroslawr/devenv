@@ -12,3 +12,17 @@ playbook:
     git clone https://github.com/jaroslawr/devenv.git
     cd devenv
     ansible-playbook devenv.yml
+
+## Manual setup steps
+
+- Enable gnome shell themes in gnome tweak tool, log out and in again
+
+- Set themes in gnome tweak tool: Arc-Dark for applications and shell, Moka for
+  icons, DMZ-White for curors
+
+- Set interface font in gnome tweak tool: Lato
+
+- Download and set wallpaper:
+  <https://www.deviantart.com/mushcube/art/Annapurna-474805362>
+
+- Install uBlock Origin in Google Chrome
