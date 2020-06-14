@@ -21,6 +21,7 @@
           - jq
 
           # Cloud
+          - rclone
           - awscli
 
           # TUI
