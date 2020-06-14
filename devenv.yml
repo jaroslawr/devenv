@@ -3,6 +3,7 @@
 - import_playbook: system_dev.yml
 - import_playbook: servers_http.yml
 - import_playbook: servers_db.yml
+- import_playbook: lang_go.yml
 - import_playbook: lang_java.yml
 - import_playbook: lang_js.yml
 - import_playbook: lang_python.yml

@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+    - name: Go - install
+      apt:
+        pkg:
+          - golang
