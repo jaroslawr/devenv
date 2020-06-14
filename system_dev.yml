@@ -27,9 +27,10 @@
           - tig
 
           # Crypto
-          - ssh
           - openvpn
+          - ssh
           - gnupg
+          - pinentry-tty
 
           # Troubleshooting - general
           - strace
@@ -51,6 +52,11 @@
           - dnsutils # dig
           - net-tools # netstat
           - whois
+
+    - name: GPG - pinentry-tty as default
+      alternatives:
+        name: pinentry
+        path: /usr/bin/pinentry-tty
 
     - name: Docker - setup apt key
       apt_key:
