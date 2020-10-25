@@ -16,6 +16,7 @@
           - fd-find
           - fzf
           - pv
+          - universal-ctags
 
           # Data processing
           - jq
