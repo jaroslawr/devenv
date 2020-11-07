@@ -1,9 +1,0 @@
-- hosts: localhost
-  tasks:
-    - name: Install HTTP servers & clients
-      apt:
-        pkg:
-          - nginx
-          - curl
-          - wget
-          - apache2-utils # ab
