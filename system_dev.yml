@@ -10,16 +10,20 @@
           # Base
           - tmux
           - zsh
-          - git
           - vim-nox
+          - git
+          - tig
           - ripgrep
           - fd-find
           - fzf
-          - pv
-          - universal-ctags
-
-          # Data processing
           - jq
+          - pv
+          
+          # Crypto
+          - openvpn
+          - ssh
+          - gnupg
+          - pinentry-tty
 
           # DB clients
           - postgresql-client
@@ -32,15 +36,6 @@
           # Cloud
           - rclone
           - awscli
-
-          # TUI
-          - tig
-
-          # Crypto
-          - openvpn
-          - ssh
-          - gnupg
-          - pinentry-tty
 
           # Troubleshooting - general
           - strace

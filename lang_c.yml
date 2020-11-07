@@ -9,6 +9,7 @@
           - make
           - autoconf
           - automake
+          - universal-ctags
 
     - name: C - install common headers
           # many Python/Ruby/Node/etc packages will require some of those
