@@ -13,4 +13,6 @@
 
     - name: C - install common headers
           # many Python/Ruby/Node/etc packages will require some of those
+          - libpq-dev
+          - default-libmysqlclient-dev
           - libpng-dev
