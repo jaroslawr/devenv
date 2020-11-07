@@ -21,7 +21,7 @@
           
           # Crypto
           - openvpn
-          - ssh
+          - openssh-client
           - gnupg
           - pinentry-tty
 
