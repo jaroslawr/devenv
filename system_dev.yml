@@ -21,6 +21,14 @@
           # Data processing
           - jq
 
+          # DB clients
+          - postgresql-client
+          - default-mysql-client
+
+          # HTTP clients
+          - wget
+          - curl
+
           # Cloud
           - rclone
           - awscli
