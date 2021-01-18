@@ -70,7 +70,7 @@
 
     - name: Docker - setup apt repository
       apt_repository:
-        repo: deb https://download.docker.com/linux/debian stretch stable
+        repo: deb https://download.docker.com/linux/debian buster stable
 
     - name: Docker - install
       apt:
