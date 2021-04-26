@@ -17,8 +17,9 @@
           - jupytext
           - numpy
           - scipy
+          - statsmodels
           - pandas
           - matplotlib
           - seaborn
-          - statsmodels
+          - altair
           - csvkit
