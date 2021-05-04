@@ -8,6 +8,8 @@
       apt:
         pkg:
           # Base
+          - linux-image-amd64
+          - linux-headers-amd64
           - iw # wifi
           - network-manager # wifi
           - rcm # dotfiles
