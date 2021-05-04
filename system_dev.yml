@@ -38,14 +38,12 @@
           - awscli
 
           # Troubleshooting - general
+          - sysstat # sar/pidstat/...
+          - linux-perf
           - strace
           - lsof
-          - htop
-          - dstat
-          - iotop
           - iftop
-          - sysstat # sar, pidstat, iostat, mpstat
-          - linux-perf
+          - htop
 
           # Troubleshooting - network
           - tcpdump
