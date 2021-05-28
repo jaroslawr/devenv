@@ -53,6 +53,7 @@
           - ngrep
           - nmap
           - ncat
+          - socat
           - dnsutils # dig
           - net-tools # netstat
           - whois
