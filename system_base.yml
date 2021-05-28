@@ -31,12 +31,16 @@
           - gimp
           - keepassx
 
-    - name: Add users to groups
+    - name: Configure users
       with_items: "{{ users }}"
       user:
         name: "{{ item }}"
-        groups: sudo,lp,lpadmin
-        append: yes
+        state: present
+        groups:
+          - docker
+          - sudo
+          - lp
+          - lpadmin
 
     - name: Locales - generate
       locale_gen:
