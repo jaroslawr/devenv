@@ -49,6 +49,7 @@
           # Troubleshooting - network
           - tcpdump
           - wireshark
+          - tshark
           - mtr
           - ngrep
           - nmap
