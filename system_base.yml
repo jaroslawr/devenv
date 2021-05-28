@@ -42,6 +42,9 @@
           - lp
           - lpadmin
 
+    - name: Hardware clock in local time
+      command: /usr/bin/timedatectl set-local-rtc 1
+
     - name: Locales - generate
       locale_gen:
         name: "{{ item }}"
