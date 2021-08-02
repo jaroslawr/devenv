@@ -11,6 +11,8 @@
         state: latest
         name:
           - virtualenv
+          - pyflakes
+          - mypy
           - jedi
           - jupyter
           - jupyterlab
