@@ -18,8 +18,10 @@
           - fzf
           - jq
           - pv
-          
+
           # Crypto
+          - wireguard
+          - openresolv # dependency of wireguard
           - openvpn
           - openssh-client
           - gnupg
