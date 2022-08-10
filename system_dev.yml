@@ -25,7 +25,6 @@
           - openvpn
           - openssh-client
           - gnupg
-          - pinentry-tty
 
           # DB clients
           - postgresql-client
@@ -61,10 +60,19 @@
           - net-tools # netstat
           - whois
 
-    - name: GPG - pinentry-tty as default
+    # pinentry-gnome3 uses a modal dialog, does not work with a password manager
+    # pinentry-tty has this bug:
+    # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=850946
+    # It is fixed in gpg 2.3, but gpg 2.3 is experimental and is not packaged in Debian/Ubuntu
+    # When gpg 2.3 or 2.4 enters Debian, switch to pinentry-tty
+    - name: GPG - install pinentry-qt
+      apt:
+        pkg: pinentry-qt
+
+    - name: GPG - pinentry-qt as default pinentry
       alternatives:
         name: pinentry
-        path: /usr/bin/pinentry-tty
+        path: /usr/bin/pinentry-qt
 
     - name: Docker - setup apt key
       apt_key:
