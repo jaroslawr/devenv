@@ -3,25 +3,5 @@
     - name: Python - install
       apt:
         pkg:
-          - python3-pip
-
-    - name: Python - packages
-      pip:
-        executable: pip3
-        state: latest
-        name:
-          - virtualenv
-          - pyflakes
-          - mypy
-          - jedi
-          - jupyter
-          - jupyterlab
-          - jupytext
-          - numpy
-          - scipy
-          - statsmodels
-          - pandas
-          - matplotlib
-          - seaborn
-          - altair
-          - csvkit
+          - python3-full
+          - python3-virtualenvwrapper
