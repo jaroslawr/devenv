@@ -10,7 +10,7 @@
           # Base
           - tmux
           - zsh
-          - vim-nox
+          - neovim
           - git
           - tig
           - ripgrep
