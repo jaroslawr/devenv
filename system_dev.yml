@@ -9,7 +9,6 @@
         pkg:
           # Base
           - tmux
-          - zsh
           - neovim
           - git
           - tig
