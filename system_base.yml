@@ -14,15 +14,18 @@
           - network-manager # wifi
           - rcm # dotfiles
           - cups # printer
-          # Desktop
+          # Desktop software
           - gnome-core
           - gnome-tweaks
           - gnome-shell-extensions
           - gnome-shell-extension-manager
-          - wl-clipboard
+          - gimp
+          - keepassx
+          # Themes
           - numix-gtk-theme
           - moka-icon-theme
           - dmz-cursor-theme
+          # Fonts
           - fonts-ubuntu
           - fonts-lato
           - fonts-firacode
@@ -30,9 +33,6 @@
           - fonts-jetbrains-mono
           - fonts-crosextra-caladea
           - fonts-crosextra-carlito
-          # Desktop software
-          - gimp
-          - keepassx
 
     - name: Configure users
       with_items: "{{ users }}"

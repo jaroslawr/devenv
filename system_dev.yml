@@ -16,6 +16,7 @@
           - fzf
           - jq
           - pv
+          - wl-clipboard
 
           # Crypto
           - wireguard
