@@ -16,8 +16,9 @@
           - cups # printer
           # Desktop
           - gnome-core
-          - gnome-shell-extensions
           - gnome-tweaks
+          - gnome-shell-extensions
+          - gnome-shell-extension-manager
           - wl-clipboard
           - numix-gtk-theme
           - moka-icon-theme
