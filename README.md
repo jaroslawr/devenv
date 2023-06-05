@@ -17,8 +17,10 @@ playbook:
 
 - Enable "User themes" extension in "Extensions" Gnome app
 
-- Set themes in gnome tweaks: Yaru for shell, icons and legacy applications,
-  DMZ-White for curors
+- Change to dark mode in Gnome appearence settings
+
+- Set themes in gnome tweaks: Yaru-red-dark for shell, icons and legacy
+  applications, DMZ-White for curors
 
 - Set interface font in gnome tweaks: Ubuntu
 
