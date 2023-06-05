@@ -15,10 +15,12 @@ playbook:
 
 ## Manual setup steps
 
-- Set themes in gnome tweak tool: Numix for applications and shell, Moka for
+- Enable "User themes" extension in "Extensions" Gnome app
+
+- Set themes in gnome tweaks: Numix for applications and shell, Moka for
   icons, DMZ-White for curors
 
-- Set interface font in gnome tweak tool: Ubuntu
+- Set interface font in gnome tweaks: Ubuntu
 
 - Download and set wallpaper:
   <https://www.deviantart.com/mushcube/art/Annapurna-474805362>
