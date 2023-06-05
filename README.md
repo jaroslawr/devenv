@@ -17,8 +17,8 @@ playbook:
 
 - Enable "User themes" extension in "Extensions" Gnome app
 
-- Set themes in gnome tweaks: Numix for applications and shell, Moka for
-  icons, DMZ-White for curors
+- Set themes in gnome tweaks: Yaru for shell, icons and legacy applications,
+  DMZ-White for curors
 
 - Set interface font in gnome tweaks: Ubuntu
 

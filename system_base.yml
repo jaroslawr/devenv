@@ -22,8 +22,9 @@
           - gimp
           - keepassx
           # Themes
-          - numix-gtk-theme
-          - moka-icon-theme
+          - yaru-theme-gnome-shell
+          - yaru-theme-gtk
+          - yaru-theme-icon
           - dmz-cursor-theme
           # Fonts
           - fonts-ubuntu
