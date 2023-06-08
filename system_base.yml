@@ -4,7 +4,19 @@
     - config.yml
 
   tasks:
-    - name: Install packages
+    - name: Allow Debian Unstable packages only on demand
+      copy:
+        dest: /etc/apt/preferences.d/pins
+        content: |
+          Package: *
+          Pin: release a=unstable
+          Pin-Priority: 400
+
+    - name: Debian Unstable repo
+      apt_repository:
+        repo: deb http://ftp.icm.edu.pl/pub/Linux/debian unstable main non-free non-free-firmware contrib
+
+    - name: Install base system packages
       apt:
         pkg:
           # Base
