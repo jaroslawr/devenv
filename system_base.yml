@@ -36,7 +36,7 @@
           # Themes
           - yaru-theme-gnome-shell
           - yaru-theme-gtk
-          - numix-icon-theme-circle
+          - papirus-icon-theme
           - dmz-cursor-theme
           # Fonts
           - fonts-ubuntu

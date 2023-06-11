@@ -18,7 +18,7 @@ playbook:
 - Enable "User themes" extension in "Extensions" Gnome app
 
 - Set themes in Gnome Tweaks: Yaru-red for shell and legacy applications,
-  Numix-Circle for icons, DMZ-White for curors
+  Papirus for icons, DMZ-White for curors
 
 - Set interface font in Gnome Tweaks: Ubuntu
 
