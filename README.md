@@ -17,12 +17,10 @@ playbook:
 
 - Enable "User themes" extension in "Extensions" Gnome app
 
-- Change to dark mode in Gnome appearence settings
+- Set themes in Gnome Tweaks: Yaru-red for shell and legacy applications,
+  Numix-Circle for icons, DMZ-White for curors
 
-- Set themes in gnome tweaks: Yaru-red-dark for shell, icons and legacy
-  applications, DMZ-White for curors
-
-- Set interface font in gnome tweaks: Ubuntu
+- Set interface font in Gnome Tweaks: Ubuntu
 
 - Download and set wallpaper:
   <https://www.deviantart.com/mushcube/art/Annapurna-474805362>
