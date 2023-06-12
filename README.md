@@ -20,7 +20,8 @@ playbook:
 - Set themes in Gnome Tweaks: Yaru-red for shell and legacy applications,
   Papirus for icons, DMZ-White for curors
 
-- Set interface font in Gnome Tweaks: Ubuntu
+- Set fonts in Gnome Tweaks: Carlito Regular 12 for Interface, Documents and
+  Legacy Window Titles
 
 - Download and set wallpaper:
   <https://www.deviantart.com/mushcube/art/Annapurna-474805362>
