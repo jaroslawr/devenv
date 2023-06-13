@@ -20,10 +20,10 @@ playbook:
 - Set themes in Gnome Tweaks: Yaru-red for shell and legacy applications,
   Papirus for icons, DMZ-White for curors
 
-- Set fonts in Gnome Tweaks: Carlito Regular 12 for Interface, Documents and
-  Legacy Window Titles
+- Set fonts in Gnome Tweaks: Ubuntu Regular 11 Interface and Legacy Window
+  Titles, Carlito 12 for Documents, Monospace 11 for Monospace
 
 - Download and set wallpaper:
-  <https://www.deviantart.com/mushcube/art/Annapurna-474805362>
+  <https://unsplash.com/photos/eHK0PGncD3k>
 
 - Install uBlock Origin in Google Chrome
