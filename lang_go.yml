@@ -3,4 +3,7 @@
     - name: Go - install
       apt:
         pkg:
-          - golang
+          - golang=2:1.20~1
+          - golang-go=2:1.20~1
+          - golang-doc=2:1.20~1
+          - golang-src=2:1.20~1
