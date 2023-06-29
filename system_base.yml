@@ -41,6 +41,7 @@
           - dmz-cursor-theme
           # Fonts
           - fonts-ubuntu
+          - fonts-paratype # PT Sans / PT Serif
           - fonts-lato
           - fonts-firacode
           - fonts-inconsolata
