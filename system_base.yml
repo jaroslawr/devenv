@@ -4,17 +4,26 @@
     - config.yml
 
   tasks:
-    - name: Allow Debian Unstable packages only on demand
+    - name: Allow Debian Unstable & Experimental packages only on demand
       copy:
         dest: /etc/apt/preferences.d/pins
+        # That empty line makes or breaks the pins
         content: |
           Package: *
           Pin: release a=unstable
           Pin-Priority: 400
 
+          Package: *
+          Pin: release a=experimental
+          Pin-Priority: 400
+
     - name: Debian Unstable repo
       apt_repository:
         repo: deb http://ftp.icm.edu.pl/pub/Linux/debian unstable main non-free non-free-firmware contrib
+
+    - name: Debian Experimental repo
+      apt_repository:
+        repo: deb http://ftp.icm.edu.pl/pub/Linux/debian experimental main non-free non-free-firmware contrib
 
     - name: Install base system packages
       apt:
