@@ -52,11 +52,11 @@
           - fonts-ubuntu
           - fonts-paratype # PT Sans / PT Serif
           - fonts-lato
-          - fonts-firacode
-          - fonts-inconsolata
-          - fonts-jetbrains-mono
           - fonts-crosextra-caladea
           - fonts-crosextra-carlito
+          - fonts-jetbrains-mono=2.304+ds-1
+          - fonts-firacode
+          - fonts-inconsolata
 
     - name: Configure users
       with_items: "{{ users }}"
