@@ -9,6 +9,8 @@
           - make
           - autoconf
           - automake
+          - clangd
+          - bear # builds compilation database for clangd
           - universal-ctags
 
     - name: C - install common headers
