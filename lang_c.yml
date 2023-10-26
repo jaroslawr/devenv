@@ -4,11 +4,13 @@
       apt:
         pkg:
           - build-essential
+          - gcc
           - gdb
           - gdb-doc
           - make
           - autoconf
           - automake
+          - clang
           - clangd
           - bear # builds compilation database for clangd
           - universal-ctags
