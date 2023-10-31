@@ -16,6 +16,8 @@
           - universal-ctags
 
     - name: C - install common headers
+      apt:
+        pkg:
           # many Python/Ruby/Node/etc packages will require some of those
           - libpq-dev
           - default-libmysqlclient-dev
