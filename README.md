@@ -24,6 +24,6 @@ playbook:
   Titles, Carlito 12 for Documents, Monospace 11 for Monospace
 
 - Download and set wallpaper:
-  <https://unsplash.com/photos/eHK0PGncD3k>
+  <https://wallhaven.cc/w/858x21>
 
 - Install uBlock Origin in Google Chrome
