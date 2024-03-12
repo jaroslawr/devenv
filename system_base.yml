@@ -64,7 +64,6 @@
         name: "{{ item }}"
         state: present
         groups:
-          - docker
           - sudo
           - lp
           - lpadmin
