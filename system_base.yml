@@ -47,7 +47,7 @@
           - yaru-theme-gnome-shell
           - yaru-theme-gtk
           - papirus-icon-theme
-          - dmz-cursor-theme
+          - breeze-cursor-theme
           # Fonts
           - fonts-ubuntu
           - fonts-paratype # PT Sans / PT Serif
