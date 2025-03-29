@@ -1,13 +1,15 @@
 - hosts: localhost
   tasks:
     - name: Node - setup apt key
-      apt_key:
+      get_url:
         url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
-        state: present
+        dest: /etc/apt/trusted.gpg.d/node.asc
+        mode: '0644'
+        force: true
 
     - name: Node - setup apt repository
       apt_repository:
-        repo: deb https://deb.nodesource.com/node_15.x bullseye main
+        repo: 'deb [signed-by=/etc/apt/trusted.gpg.d/node.asc] https://deb.nodesource.com/node_15.x bullseye main'
 
     - name: Node - install
       apt:

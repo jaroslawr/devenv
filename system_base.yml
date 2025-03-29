@@ -85,17 +85,34 @@
           LC_TIME={{ locale_time }}
 
     - name: Chrome - setup apt key
-      apt_key:
+      get_url:
         url: https://dl-ssl.google.com/linux/linux_signing_key.pub
-        state: present
+        dest: /etc/apt/trusted.gpg.d/chrome.asc
+        mode: '0644'
+        force: true
 
     - name: Chrome - setup apt repository
       apt_repository:
-        repo: deb http://dl.google.com/linux/chrome/deb/ stable main
+        repo: 'deb [signed-by=/etc/apt/trusted.gpg.d/chrome.asc] http://dl.google.com/linux/chrome/deb/ stable main'
 
     - name: Chrome - install
       apt:
         pkg: google-chrome-stable
+
+    - name: Spotify - setup apt key
+      get_url:
+        url: https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg
+        dest: /etc/apt/trusted.gpg.d/spotify.asc
+        mode: '0644'
+        force: true
+
+    - name: Spotify - setup apt repository
+      apt_repository:
+        repo: 'deb [signed-by=/etc/apt/trusted.gpg.d/spotify.asc] http://repository.spotify.com stable non-free'
+
+    - name: Spotify - install
+      apt:
+        pkg: spotify-client
 
     - name: Sysctl settings
       # Necessary for IDEs and editors (intellij etc.),

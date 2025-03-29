@@ -74,13 +74,14 @@
         path: /usr/bin/pinentry-qt
 
     - name: Docker - setup apt key
-      apt_key:
+      get_url:
         url: https://download.docker.com/linux/debian/gpg
-        state: present
+        dest: /etc/apt/trusted.gpg.d/docker.asc
+        mode: '0644'
 
     - name: Docker - setup apt repository
       apt_repository:
-        repo: deb https://download.docker.com/linux/debian buster stable
+        repo: 'deb [signed-by=/etc/apt/trusted.gpg.d/docker.asc] https://download.docker.com/linux/debian buster stable'
 
     - name: Docker - install
       apt:
@@ -94,13 +95,14 @@
         append: yes
 
     - name: VS Code - setup apt key
-      apt_key:
-        url:  https://packages.microsoft.com/keys/microsoft.asc
-        state: present
+      get_url:
+        url: https://packages.microsoft.com/keys/microsoft.asc
+        dest: /etc/apt/trusted.gpg.d/microsoft.asc
+        mode: '0644'
 
     - name: VS Code - setup apt repository
       apt_repository:
-        repo: deb https://packages.microsoft.com/repos/vscode stable main
+        repo: 'deb [signed-by=/etc/apt/trusted.gpg.d/microsoft.asc] https://packages.microsoft.com/repos/vscode stable main'
 
     - name: VS Code - install
       apt:
