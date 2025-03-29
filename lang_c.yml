@@ -15,10 +15,10 @@
           - bear # builds compilation database for clangd
           - universal-ctags
 
-    - name: C - install common headers
+    - name: C - install common libraries
       apt:
         pkg:
-          # many Python/Ruby/Node/etc packages will require some of those
+          - libopenblas-dev
           - libpq-dev
           - default-libmysqlclient-dev
           - libpng-dev
